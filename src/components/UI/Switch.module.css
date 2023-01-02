@@ -1,0 +1,15 @@
+.outerSwitch {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    padding: 0 0.3rem;
+    cursor: pointer;
+}
+
+.innerSwitch {
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    background-color: hsl(229, 26%, 28%);
+}

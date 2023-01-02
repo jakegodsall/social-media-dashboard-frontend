@@ -46,12 +46,13 @@ const DUMMY_DATA = {
 };
 
 const App = () => {
+    const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
+        return (total += el.followers);
+    }, 0);
 
-    const totalFollowers = 
-    
     return (
         <div className={styles.container}>
-            <Header></Header>
+            <Header totalFollowers={totalFollowers}></Header>
             <MainDashboard></MainDashboard>
             <TodayDashboard></TodayDashboard>
         </div>
