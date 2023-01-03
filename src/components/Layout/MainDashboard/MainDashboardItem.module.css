@@ -1,0 +1,51 @@
+.mainDashboardItem {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+h3 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+p {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: bolder;
+}
+
+.followers {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.headerLine {
+    display: flex;
+    justify-content: center;
+}
+
+.changeLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changeLine img {
+    margin-right: 0.5rem;
+}
+
+.changeLine p {
+    font-size: 0.8rem;
+}
+
+.increase {
+    color: hsl(163, 72%, 41%);
+}
+
+.decrease {
+    color: hsl(356, 69%, 56%);
+}

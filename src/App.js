@@ -6,8 +6,9 @@ import TodayDashboard from './components/Layout/TodayDashboard/TodayDashboard';
 
 import styles from './App.module.css';
 
-const DUMMY_DATA = {
-    facebook: {
+const DUMMY_DATA = [
+    {
+        social: 'facebook',
         handle: '@nathanf',
         followers: 1987,
         dailyData: {
@@ -16,7 +17,8 @@ const DUMMY_DATA = {
             dailyLikes: 52,
         },
     },
-    twitter: {
+    {
+        social: 'twitter',
         handle: '@nathanf',
         followers: 1044,
         dailyData: {
@@ -25,7 +27,9 @@ const DUMMY_DATA = {
             dailyLikes: 507,
         },
     },
-    instagram: {
+
+    {
+        social: 'instagram',
         handle: '@realnathanf',
         followers: 11234,
         dailyData: {
@@ -34,7 +38,9 @@ const DUMMY_DATA = {
             dailyViews: 52343,
         },
     },
-    youtube: {
+
+    {
+        social: 'youtube',
         handle: 'Nathan F.',
         followers: 8239,
         dailyData: {
@@ -43,7 +49,7 @@ const DUMMY_DATA = {
             dailyViews: 1407,
         },
     },
-};
+];
 
 const App = () => {
     const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
@@ -53,8 +59,8 @@ const App = () => {
     return (
         <div className={styles.container}>
             <Header totalFollowers={totalFollowers}></Header>
-            <MainDashboard></MainDashboard>
-            <TodayDashboard></TodayDashboard>
+            <MainDashboard data={DUMMY_DATA}></MainDashboard>
+            <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
         </div>
     );
 };

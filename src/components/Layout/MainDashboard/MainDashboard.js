@@ -5,23 +5,16 @@ import MainDashboardItem from './MainDashboardItem';
 
 import styles from './MainDashboard.module.css';
 
-const MainDashboard = () => {
-    return (
-        <div className={styles.mainDashboard}>
-            <Card>
-                <MainDashboardItem></MainDashboardItem>
+const MainDashboard = (props) => {
+    const mainCards = props.data.map((social, idx) => {
+        return (
+            <Card key={idx}>
+                <MainDashboardItem socialData={social}></MainDashboardItem>
             </Card>
-            <Card>
-                <MainDashboardItem></MainDashboardItem>
-            </Card>
-            <Card>
-                <MainDashboardItem></MainDashboardItem>
-            </Card>
-            <Card>
-                <MainDashboardItem></MainDashboardItem>
-            </Card>
-        </div>
-    );
+        );
+    });
+
+    return <div className={styles.mainDashboardGrid}>{mainCards}</div>;
 };
 
 export default MainDashboard;
