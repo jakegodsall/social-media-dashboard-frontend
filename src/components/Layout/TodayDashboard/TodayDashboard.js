@@ -4,10 +4,10 @@ import styles from './TodayDashboard.module.css';
 
 const TodayDashboard = (props) => {
     return (
-        <React.Fragment>
+        <div className={styles.todayDashboard}>
             <h2>Overview - Today</h2>
             <div className={styles.todayGrid}></div>
-        </React.Fragment>
+        </div>
     );
 };
 

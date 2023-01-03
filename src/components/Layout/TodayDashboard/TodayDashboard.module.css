@@ -1,3 +1,7 @@
+.todayDashboard {
+    margin-top: 3rem;
+}
+
 .todayGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
