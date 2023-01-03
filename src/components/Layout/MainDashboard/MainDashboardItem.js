@@ -11,7 +11,15 @@ import YoutubeIcon from '../../../assets/images/icon-youtube.svg';
 import styles from './MainDashboardItem.module.css';
 
 const MainDashboardItem = (props) => {
+    const iconMap = {
+        facebook: FacebookIcon,
+        twitter: TwitterIcon,
+        instagram: InstaIcon,
+        youtube: YoutubeIcon,
+    };
+
     const handle = props.socialData.handle;
+    const icon = iconMap[props.socialData.social];
     const followers = props.socialData.followers;
     const change = props.socialData.dailyData.dailyFollowers;
     const changeClass = change >= 0 ? styles.increase : styles.decrease;
@@ -59,6 +67,7 @@ const MainDashboardItem = (props) => {
     return (
         <div className={styles.mainDashboardItem}>
             <div className={styles.headerLine}>
+                <img src={icon} alt={`${props.socialData.social} logo`} />
                 <p>{handle}</p>
             </div>
             <h3>{followerFormat(followers, 1)}</h3>
