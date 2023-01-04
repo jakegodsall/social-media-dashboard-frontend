@@ -39,7 +39,7 @@ const TodayDashboardItem = (props) => {
                     ) : (
                         <img src={DownIcon} alt='Decrease' />
                     )}
-                    <p className={changeClass}>{Math.abs(props.change)}</p>
+                    <p className={changeClass}>{`${Math.abs(props.change)}%`}</p>
                 </div>
             </div>
         </div>
