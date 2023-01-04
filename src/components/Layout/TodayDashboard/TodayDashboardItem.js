@@ -4,6 +4,9 @@ import numberFormat from '../../../Utils';
 
 import styles from './TodayDashboardItem.module.css';
 
+import UpIcon from '../../../assets/images/icon-up.svg';
+import DownIcon from '../../../assets/images/icon-down.svg';
+
 import FacebookIcon from '../../../assets/images/icon-facebook.svg';
 import TwitterIcon from '../../../assets/images/icon-twitter.svg';
 import InstaIcon from '../../../assets/images/icon-instagram.svg';
@@ -31,6 +34,11 @@ const TodayDashboardItem = (props) => {
             <div className={styles.bottomRow}>
                 <h3>{value}</h3>
                 <div className={styles.changeIcon}>
+                    {props.change >= 0 ? (
+                        <img src={UpIcon} alt='Increase' />
+                    ) : (
+                        <img src={DownIcon} alt='Decrease' />
+                    )}
                     <p className={changeClass}>{Math.abs(props.change)}</p>
                 </div>
             </div>

@@ -11,6 +11,11 @@
 .bottomRow {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.bottomRow h3 {
+    font-size: 2rem;
 }
 
 .changeIcon {
@@ -24,4 +29,8 @@
 
 .decrease {
     color: hsl(356, 69%, 56%);
+}
+
+.changeIcon img {
+    margin-right: 0.5rem;
 }
