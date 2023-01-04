@@ -14,7 +14,9 @@ const DUMMY_DATA = [
         dailyData: {
             dailyFollowers: 12,
             dailyViews: 87,
+            dailyViewsChange: 3,
             dailyLikes: 52,
+            dailyLikesChange: -2,
         },
     },
     {
@@ -24,7 +26,9 @@ const DUMMY_DATA = [
         dailyData: {
             dailyFollowers: 99,
             dailyRetweets: 117,
+            dailyRetweetsChange: 303,
             dailyLikes: 507,
+            dailyLikesChange: 553,
         },
     },
 
@@ -35,7 +39,9 @@ const DUMMY_DATA = [
         dailyData: {
             dailyFollowers: 1099,
             dailyLikes: 5462,
+            dailyLikesChange: 2257,
             dailyViews: 52343,
+            dailyViewsChange: 1365,
         },
     },
 
@@ -46,7 +52,9 @@ const DUMMY_DATA = [
         dailyData: {
             dailyFollowers: -144,
             dailyLikes: 107,
+            dailyLikesChange: -19,
             dailyViews: 1407,
+            dailyViewsChange: -12,
         },
     },
 ];
