@@ -15,12 +15,8 @@ const numberFormat = (num, decPlaces) => {
 
         if (size <= num) {
             // multiply by decPlaces, round, and divide by decPlaces.
-            console.log(num);
 
             num = Math.round((num * decPlaces) / size) / decPlaces;
-
-            console.log('test');
-            console.log(num);
 
             // Handle special case where we roudn up to the next letter
             if (num === 1000 && i < letters.length - 1) {

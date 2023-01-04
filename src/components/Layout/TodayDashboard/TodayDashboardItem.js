@@ -23,7 +23,7 @@ const TodayDashboardItem = (props) => {
     const icon = iconMap[props.social];
     const changeClass = props.change >= 0 ? styles.increase : styles.decrease;
 
-    const value = numberFormat(+props.value);
+    const value = numberFormat(props.value, 1);
 
     return (
         <div>
