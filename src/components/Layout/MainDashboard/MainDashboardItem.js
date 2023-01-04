@@ -1,5 +1,7 @@
 import React from 'react';
 
+import numberFormat from '../../../Utils';
+
 import UpIcon from '../../../assets/images/icon-up.svg';
 import DownIcon from '../../../assets/images/icon-down.svg';
 
@@ -24,53 +26,13 @@ const MainDashboardItem = (props) => {
     const change = props.socialData.dailyData.dailyFollowers;
     const changeClass = change >= 0 ? styles.increase : styles.decrease;
 
-    const followerFormat = (followers, decPlaces) => {
-        // letters for representing orders of magnitude
-        const letters = ['k', 'm', 'b', 't'];
-
-        if (followers <= 10000) {
-            return followers;
-        }
-
-        // loop through the array backwards
-        for (let i = letters.length - 1; i >= 0; i--) {
-            // convert array indices to 1000, 1000000 etc
-            let size = Math.pow(10, (i + 1) * 3);
-
-            // if the number is bigger or equal to the value calculated above
-
-            if (size <= followers) {
-                // multiply by decPlaces, round, and divide by decPlaces.
-                console.log(followers);
-
-                followers = Math.round((followers * decPlaces) / size) / decPlaces;
-
-                console.log('test');
-                console.log(followers);
-
-                // Handle special case where we roudn up to the next letter
-                if (followers === 1000 && i < letters.length - 1) {
-                    followers = 1;
-                    i++;
-                }
-
-                // add the letter to the number
-                followers += letters[i];
-
-                break;
-            }
-        }
-
-        return followers;
-    };
-
     return (
         <div className={styles.mainDashboardItem}>
             <div className={styles.headerLine}>
                 <img src={icon} alt={`${props.socialData.social} logo`} />
                 <p>{handle}</p>
             </div>
-            <h3>{followerFormat(followers, 1)}</h3>
+            <h3>{numberFormat(followers, 1)}</h3>
             <p className={styles.followers}>followers</p>
             <div className={styles.changeLine}>
                 {change >= 0 ? (
