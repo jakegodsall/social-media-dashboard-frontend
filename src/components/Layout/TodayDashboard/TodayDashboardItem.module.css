@@ -1,3 +1,7 @@
+.dailyCard {
+    padding: 0 1.5rem;
+}
+
 .topRow {
     display: flex;
     justify-content: space-between;

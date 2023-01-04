@@ -26,7 +26,7 @@ const TodayDashboardItem = (props) => {
     const value = numberFormat(props.value, 1);
 
     return (
-        <div>
+        <div className={styles.dailyCard}>
             <div className={styles.topRow}>
                 <p>{props.metric}</p>
                 <img src={icon} alt={`${props.social} logo`} />
