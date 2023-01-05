@@ -5,6 +5,8 @@
     background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     padding: 0 0.3rem;
     cursor: pointer;
+
+    position: relative;
 }
 
 .innerSwitch {
@@ -12,4 +14,9 @@
     aspect-ratio: 1 / 1;
     border-radius: 50px;
     background-color: hsl(229, 26%, 28%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lightMode {
+    transform: translateX(1.5rem);
 }

@@ -15,7 +15,9 @@ const Switch = () => {
     return (
         <div className={styles.outerSwitch} onClick={onClickHandler}>
             <div
-                className={darkMode ? `styles.innerSwitch` : `styles.innerSwitch styles.lightMode`}
+                className={
+                    darkMode ? `${styles.innerSwitch}` : `${styles.innerSwitch} ${styles.lightMode}`
+                }
             ></div>
         </div>
     );
