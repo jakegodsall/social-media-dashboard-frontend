@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from './components/Layout/Header';
 import MainDashboard from './components/Layout/MainDashboard/MainDashboard';
 import TodayDashboard from './components/Layout/TodayDashboard/TodayDashboard';
 
 import styles from './App.module.css';
+import ThemeContext from './context/theme-context';
 
 const DUMMY_DATA = [
     {
@@ -59,17 +60,25 @@ const DUMMY_DATA = [
     },
 ];
 
+const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
+    return (total += el.followers);
+}, 0);
+
 const App = () => {
-    const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
-        return (total += el.followers);
-    }, 0);
+    const [darkMode, setDarkMode] = useState(true);
+
+    const onDarkModeHandler = (darkMode) => {
+        setDarkMode(!darkMode);
+    };
 
     return (
-        <div className={styles.container}>
-            <Header totalFollowers={totalFollowers}></Header>
-            <MainDashboard data={DUMMY_DATA}></MainDashboard>
-            <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
-        </div>
+        <ThemeContext.Provider value={{ darkMode: true }}>
+            <div className={styles.container}>
+                <Header onDarkMode={onDarkModeHandler} totalFollowers={totalFollowers}></Header>
+                <MainDashboard data={DUMMY_DATA}></MainDashboard>
+                <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
+            </div>
+        </ThemeContext.Provider>
     );
 };
 

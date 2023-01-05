@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import styles from './Switch.module.css';
 
-const Switch = () => {
+const Switch = (props) => {
     const [darkMode, setDarkMode] = useState(true);
 
     const onClickHandler = () => {
         setDarkMode((mode) => {
             return !mode;
         });
-        console.log(darkMode);
+        props.onDarkMode(darkMode);
     };
 
     return (
