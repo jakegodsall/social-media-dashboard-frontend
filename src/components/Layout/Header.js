@@ -16,14 +16,15 @@ const Header = (props) => {
         <header
             className={ctx.darkMode ? `${styles.header}` : `${styles.header} ${styles.lightMode}`}
         >
-            <div className={styles.headerTopRow}>
+            <div className={styles.headerLeft}>
                 <h1>Social Media Dashboard</h1>
-                <div>
-                    <h3>Dark Mode</h3>
-                    <Switch onDarkMode={onDarkModeHandler} />
-                </div>
+                <p>{'Total Followers: ' + props.totalFollowers.toLocaleString('en-US')}</p>
             </div>
-            <p>{'Total Followers: ' + props.totalFollowers.toLocaleString('en-US')}</p>
+
+            <div className={styles.headerRight}>
+                <h3>Dark Mode</h3>
+                <Switch onDarkMode={onDarkModeHandler} />
+            </div>
         </header>
     );
 };

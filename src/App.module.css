@@ -1,5 +1,6 @@
 .container {
     width: 75%;
     max-width: 1500px;
+    min-width: 350px;
     margin-inline: auto;
 }
