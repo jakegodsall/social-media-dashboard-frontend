@@ -1,8 +1,7 @@
 .mainDashboardItem {
     display: flex;
     flex-direction: column;
-    align-items: space-between;
-    padding: 0 4rem;
+    padding: 0 1.5rem;
 }
 
 h3 {
