@@ -24,7 +24,7 @@
 }
 
 .headerRight h3 {
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
     font-size: 1rem;
     margin: 0;
     margin-right: 0.5rem;
@@ -51,9 +51,6 @@ p {
 }
 
 @media screen and (max-width: 700px) {
-    .header {
-    }
-
     .headerLeft h1 {
         font-size: 1.5rem;
     }
