@@ -1,20 +1,16 @@
 import React, { useContext } from 'react';
 
-import ThemeContext from '../../context/theme-context';
+import { ThemeContext } from '../../context/theme-context';
 
 import Switch from '../UI/Switch';
 import styles from './Header.module.css';
 
 const Header = (props) => {
-    const ctx = useContext(ThemeContext);
-
-    const onDarkModeHandler = (darkMode) => {
-        props.onDarkMode(darkMode);
-    };
+    const { darkMode } = useContext(ThemeContext);
 
     return (
         <header
-            className={ctx.darkMode ? `${styles.header}` : `${styles.header} ${styles.lightMode}`}
+            className={darkMode ? `${styles.header}` : `${styles.header} ${styles.headerLightMode}`}
         >
             <div className={styles.headerLeft}>
                 <h1>Social Media Dashboard</h1>
@@ -23,7 +19,7 @@ const Header = (props) => {
 
             <div className={styles.headerRight}>
                 <h3>Dark Mode</h3>
-                <Switch onDarkMode={onDarkModeHandler} />
+                <Switch />
             </div>
         </header>
     );

@@ -55,3 +55,13 @@ p {
         font-size: 1.5rem;
     }
 }
+
+/* Light mode */
+.headerLightMode h1 {
+    color: hsl(230, 17%, 14%);
+}
+
+.headerLightMode h3,
+.headerLightMode p {
+    color: hsl(228, 12%, 44%);
+}

@@ -1,22 +1,32 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
 import styles from './Switch.module.css';
 
-const Switch = (props) => {
-    const [darkMode, setDarkMode] = useState(true);
+import { ThemeContext } from '../../context/theme-context';
 
+const Switch = (props) => {
     const onClickHandler = () => {
         setDarkMode((mode) => {
             return !mode;
         });
-        props.onDarkMode(darkMode);
     };
 
+    const { darkMode, setDarkMode } = useContext(ThemeContext);
+
     return (
-        <div className={styles.outerSwitch} onClick={onClickHandler}>
+        <div
+            className={
+                darkMode
+                    ? `${styles.outerSwitch}`
+                    : `${styles.outerSwitch} ${styles.outerSwitchLightMode}`
+            }
+            onClick={onClickHandler}
+        >
             <div
                 className={
-                    darkMode ? `${styles.innerSwitch}` : `${styles.innerSwitch} ${styles.lightMode}`
+                    darkMode
+                        ? `${styles.innerSwitch}`
+                        : `${styles.innerSwitch} ${styles.innerSwitchLightMode}`
                 }
             ></div>
         </div>

@@ -5,7 +5,7 @@ import MainDashboard from './components/Layout/MainDashboard/MainDashboard';
 import TodayDashboard from './components/Layout/TodayDashboard/TodayDashboard';
 
 import styles from './App.module.css';
-import ThemeContext from './context/theme-context';
+import { ThemeContext } from './context/theme-context';
 
 const DUMMY_DATA = [
     {
@@ -67,14 +67,10 @@ const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
 const App = () => {
     const [darkMode, setDarkMode] = useState(true);
 
-    const onDarkModeHandler = (darkMode) => {
-        setDarkMode(!darkMode);
-    };
-
     return (
-        <ThemeContext.Provider value={{ darkMode: true }}>
+        <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
             <div className={styles.container}>
-                <Header onDarkMode={onDarkModeHandler} totalFollowers={totalFollowers}></Header>
+                <Header totalFollowers={totalFollowers}></Header>
                 <MainDashboard data={DUMMY_DATA}></MainDashboard>
                 <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
             </div>

@@ -16,6 +16,12 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.lightMode {
+/* Light mode */
+.outerSwitchLightMode {
+    background-image: linear-gradient(to right, hsl(228, 12%, 44%), hsl(228, 12%, 44%));
+}
+
+.innerSwitchLightMode {
+    background-color: #fff;
     transform: translateX(1.5rem);
 }
