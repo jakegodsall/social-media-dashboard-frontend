@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import numberFormat from '../../../Utils';
 
@@ -12,7 +12,11 @@ import TwitterIcon from '../../../assets/images/icon-twitter.svg';
 import InstaIcon from '../../../assets/images/icon-instagram.svg';
 import YoutubeIcon from '../../../assets/images/icon-youtube.svg';
 
+import { ThemeContext } from '../../../context/theme-context';
+
 const TodayDashboardItem = (props) => {
+    const { darkMode } = useContext(ThemeContext);
+
     const iconMap = {
         facebook: FacebookIcon,
         twitter: TwitterIcon,
@@ -25,10 +29,14 @@ const TodayDashboardItem = (props) => {
 
     const value = numberFormat(props.value, 1);
 
+    const dailyCardClasses = darkMode
+        ? `${styles.dailyCard}`
+        : `${styles.dailyCard} ${styles.dailyCardLightMode}`;
+
     return (
-        <div className={styles.dailyCard}>
+        <div className={dailyCardClasses}>
             <div className={styles.topRow}>
-                <p>{props.metric}</p>
+                <p className={`${styles.metric}`}>{props.metric}</p>
                 <img src={icon} alt={`${props.social} logo`} />
             </div>
             <div className={styles.bottomRow}>

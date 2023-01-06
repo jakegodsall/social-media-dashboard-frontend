@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import numberFormat from '../../../Utils';
 
@@ -12,7 +12,11 @@ import YoutubeIcon from '../../../assets/images/icon-youtube.svg';
 
 import styles from './MainDashboardItem.module.css';
 
+import { ThemeContext } from '../../../context/theme-context';
+
 const MainDashboardItem = (props) => {
+    const { darkMode } = useContext(ThemeContext);
+
     const iconMap = {
         facebook: FacebookIcon,
         twitter: TwitterIcon,
@@ -27,7 +31,13 @@ const MainDashboardItem = (props) => {
     const changeClass = change >= 0 ? styles.increase : styles.decrease;
 
     return (
-        <div className={styles.mainDashboardItem}>
+        <div
+            className={
+                darkMode
+                    ? `${styles.mainDashboardItem}`
+                    : `${styles.mainDashboardItem} ${styles.mainDashboardItemLightMode}`
+            }
+        >
             <div className={styles.headerLine}>
                 <img src={icon} alt={`${props.socialData.social} logo`} />
                 <p>{handle}</p>

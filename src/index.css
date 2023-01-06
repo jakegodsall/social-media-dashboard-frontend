@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-    background-color: hsl(230, 17%, 14%);
     color: hsl(228, 34%, 66%);
 
     font-family: 'Inter', sans-serif;

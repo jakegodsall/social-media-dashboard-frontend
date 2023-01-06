@@ -40,3 +40,9 @@
 .changeIcon img {
     margin-right: 0.5rem;
 }
+
+/* Light Mode */
+.dailyCardLightMode .metric,
+.dailyCardLightMode h3 {
+    color: hsl(230, 17%, 14%);
+}

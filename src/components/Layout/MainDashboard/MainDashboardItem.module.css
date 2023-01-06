@@ -52,3 +52,10 @@ p {
 .decrease {
     color: hsl(356, 69%, 56%);
 }
+
+/*  Light mode  */
+.mainDashboardItemLightMode .headerLine,
+.mainDashboardItemLightMode h3,
+.mainDashboardItemLightMode .followers {
+    color: hsl(230, 17%, 14%);
+}
