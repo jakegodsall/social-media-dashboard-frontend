@@ -67,8 +67,18 @@ const totalFollowers = Object.values(DUMMY_DATA).reduce((total, el) => {
 const App = () => {
     const [darkMode, setDarkMode] = useState(true);
 
+    const mainBackgroundClasses = darkMode
+        ? `${styles.mainBackground}`
+        : `${styles.mainBackground} ${styles.mainBackgroundLightMode}`;
+
+    const partialBackgroundClasses = darkMode
+        ? `${styles.partialBackground}`
+        : `${styles.partialBackground} ${styles.partialBackgroundLightMode}`;
+
     return (
         <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+            <div className={mainBackgroundClasses}></div>
+            <div className={partialBackgroundClasses}></div>
             <div className={styles.container}>
                 <Header totalFollowers={totalFollowers}></Header>
                 <MainDashboard data={DUMMY_DATA}></MainDashboard>
