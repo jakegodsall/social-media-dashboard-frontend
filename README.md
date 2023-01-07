@@ -53,6 +53,7 @@ Users should be able to:
 - A corresponding [Figma](https://www.figma.com) design file has been created as practice using the software.
 - A global state of theme (dark mode/light mode) is set and passed to all necessary components using the `Context API`.
 - Data is stored in a JavaScript object in a realistic structure, and then passed to each component as required (taking the principle of least privilege into account).
+- I created a utility function for formatting values, such that for example 51345 would be rendered as 51k. This proved to be far more difficult than I originally anticipated, but I am quite happy with the result. The source code can be found under `./src/Utils.js`
 
 
 ### Continued development
