@@ -33,3 +33,10 @@
 .partialBackgroundLightMode {
     background-color: hsl(225, 100%, 98%);
 }
+
+/* Mobile layout */
+@media screen and (max-width: 1100px) {
+    .container {
+        margin-bottom: 5rem;
+    }
+}
