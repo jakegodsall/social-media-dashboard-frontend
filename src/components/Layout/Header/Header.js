@@ -18,7 +18,7 @@ const Header = (props) => {
             </div>
 
             <div className={styles.headerRight}>
-                <h3>{darkMode ? 'Light Mode' : 'Dark Mode'}</h3>
+                <p>{darkMode ? 'Light Mode' : 'Dark Mode'}</p>
                 <Switch />
             </div>
         </header>
