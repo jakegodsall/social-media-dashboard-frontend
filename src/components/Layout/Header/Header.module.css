@@ -16,6 +16,7 @@
 
 .headerLeft h1 {
     margin-bottom: 0;
+    transition: 0.3s;
 }
 
 .headerRight {

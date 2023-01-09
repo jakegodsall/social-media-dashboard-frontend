@@ -5,6 +5,7 @@
     margin: 0;
     z-index: -10;
     position: fixed;
+    transition: 0.3s;
 }
 
 .partialBackground {
@@ -14,6 +15,7 @@
     top: 0;
     background-color: hsl(232, 19%, 15%);
     z-index: -9;
+    transition: 0.3s;
 }
 
 .container {
