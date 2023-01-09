@@ -10,8 +10,6 @@ const Footer = () => {
         ? `${styles.footer}`
         : `${styles.footer} ${styles.footerLightMode}`;
 
-    console.log(footerStyles);
-
     const linkStyles = darkMode ? `${styles.link}` : `${styles.link} ${styles.linkLightMode}`;
 
     return (

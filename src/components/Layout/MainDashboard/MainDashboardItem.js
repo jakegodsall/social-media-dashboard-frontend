@@ -42,7 +42,7 @@ const MainDashboardItem = (props) => {
                 <img src={icon} alt={`${props.socialData.social} logo`} />
                 <p>{handle}</p>
             </div>
-            <h3>{numberFormat(followers, 1)}</h3>
+            <p className={styles.count}>{numberFormat(followers, 1)}</p>
             <p className={styles.followers}>followers</p>
             <div className={styles.changeLine}>
                 {change >= 0 ? (

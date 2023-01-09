@@ -4,7 +4,8 @@
     padding: 0 1.5rem;
 }
 
-h3 {
+.count {
+    color: hsl(0, 0%, 100%);
     font-size: 3rem;
     margin: 1.5rem 0 0.5rem 0;
 }
@@ -13,6 +14,7 @@ p {
     text-transform: none;
     letter-spacing: 0;
     font-weight: bolder;
+    transition: 0.3s;
 }
 
 .followers {
@@ -55,7 +57,7 @@ p {
 
 /*  Light mode  */
 .mainDashboardItemLightMode .headerLine,
-.mainDashboardItemLightMode h3,
+.mainDashboardItemLightMode .count,
 .mainDashboardItemLightMode .followers {
     color: hsl(230, 17%, 14%);
 }

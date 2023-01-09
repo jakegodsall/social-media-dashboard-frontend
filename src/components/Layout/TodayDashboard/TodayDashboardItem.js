@@ -40,7 +40,7 @@ const TodayDashboardItem = (props) => {
                 <img src={icon} alt={`${props.social} logo`} />
             </div>
             <div className={styles.bottomRow}>
-                <h3>{value}</h3>
+                <p className={styles.count}>{value}</p>
                 <div className={styles.changeIcon}>
                     {props.change >= 0 ? (
                         <img src={UpIcon} alt='Increase' />

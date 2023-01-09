@@ -19,7 +19,8 @@
     margin-top: 2rem;
 }
 
-.bottomRow h3 {
+.bottomRow .count {
+    color: hsl(0, 0%, 100%);
     font-size: 2rem;
     margin: 0;
 }
@@ -43,6 +44,6 @@
 
 /* Light Mode */
 .dailyCardLightMode .metric,
-.dailyCardLightMode h3 {
+.dailyCardLightMode .count {
     color: hsl(230, 17%, 14%);
 }
