@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import styles from './TodayDashboard.module.css';
 
 import Card from '../../UI/Card';
 import TodayDashboardItem from './TodayDashboardItem';
+import { ThemeContext } from '../../../context/theme-context';
 
 const TodayDashboard = (props) => {
+    const { darkMode } = useContext(ThemeContext);
+
     const [fb, twitter, insta, youtube] = props.data;
+
+    const h2Styles = darkMode ? `${styles.title}` : `${styles.title} ${styles.titleLightMode}`;
 
     return (
         <section className={styles.todayDashboard}>
-            <h2>Overview - Today</h2>
+            <h2 className={h2Styles}>Overview - Today</h2>
             <div className={styles.todayGrid}>
                 <Card>
                     <TodayDashboardItem

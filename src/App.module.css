@@ -23,6 +23,7 @@
     max-width: 1500px;
     min-width: 360px;
     margin-inline: auto;
+    margin-top: 5rem;
     z-index: 1;
 }
 
