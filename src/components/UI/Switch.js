@@ -5,7 +5,7 @@ import styles from './Switch.module.css';
 import { ThemeContext } from '../../context/theme-context';
 
 const Switch = (props) => {
-    const onClickHandler = () => {
+    const onChangeHandler = (props) => {
         setDarkMode((mode) => {
             return !mode;
         });
@@ -13,23 +13,20 @@ const Switch = (props) => {
 
     const { darkMode, setDarkMode } = useContext(ThemeContext);
 
+    const switchStyles = darkMode
+        ? `${styles.switch}`
+        : `${styles.switch} ${styles.switchLightMode}`;
+
     return (
-        <div
-            className={
-                darkMode
-                    ? `${styles.outerSwitch}`
-                    : `${styles.outerSwitch} ${styles.outerSwitchLightMode}`
-            }
-            onClick={onClickHandler}
-        >
-            <div
-                className={
-                    darkMode
-                        ? `${styles.innerSwitch}`
-                        : `${styles.innerSwitch} ${styles.innerSwitchLightMode}`
-                }
-            ></div>
-        </div>
+        <input
+            id={props.labelID}
+            className={switchStyles}
+            type='range'
+            min='0'
+            max='1'
+            value={darkMode ? 0 : 1}
+            onChange={onChangeHandler}
+        ></input>
     );
 };
 

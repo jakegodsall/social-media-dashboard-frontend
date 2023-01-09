@@ -18,8 +18,8 @@ const Header = (props) => {
             </div>
 
             <div className={styles.headerRight}>
-                <p>{darkMode ? 'Light Mode' : 'Dark Mode'}</p>
-                <Switch />
+                <label htmlFor='themeSwitch'>{darkMode ? 'Light Mode' : 'Dark Mode'}</label>
+                <Switch labelID={'themeSwitch'} />
             </div>
         </header>
     );

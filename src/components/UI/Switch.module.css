@@ -1,27 +1,38 @@
-.outerSwitch {
+.switch {
     width: 2.5rem;
     height: 1.5rem;
     border-radius: 50px;
     background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     padding: 0 0.3rem;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-.innerSwitch {
-    margin-top: 2px;
-    width: 1.2rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50px;
-    background-color: hsl(229, 26%, 28%);
-    transition: transform 0.3s ease-in-out;
+.switch:focus {
+    outline: none;
+}
+.switch::-webkit-slider-thumb,
+.switch::-moz-range-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: hsl(232, 19%, 15%);
+    border: none;
 }
 
 /* Light mode */
-.outerSwitchLightMode {
+.switchLightMode {
     background-image: linear-gradient(to right, hsl(228, 12%, 44%), hsl(228, 12%, 44%));
 }
 
-.innerSwitchLightMode {
-    background-color: #fff;
-    transform: translateX(1.5rem);
+.switchLightMode::-webkit-slider-thumb,
+.switchLightMode::-moz-range-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
 }
