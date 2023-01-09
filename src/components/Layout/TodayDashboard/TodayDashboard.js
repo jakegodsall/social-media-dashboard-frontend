@@ -9,7 +9,7 @@ const TodayDashboard = (props) => {
     const [fb, twitter, insta, youtube] = props.data;
 
     return (
-        <div className={styles.todayDashboard}>
+        <section className={styles.todayDashboard}>
             <h2>Overview - Today</h2>
             <div className={styles.todayGrid}>
                 <Card>
@@ -77,7 +77,7 @@ const TodayDashboard = (props) => {
                     ></TodayDashboardItem>
                 </Card>
             </div>
-        </div>
+        </section>
     );
 };
 

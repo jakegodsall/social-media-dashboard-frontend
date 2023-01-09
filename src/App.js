@@ -89,8 +89,10 @@ const App = () => {
 
             <div className={styles.container}>
                 <Header totalFollowers={totalFollowers}></Header>
-                <MainDashboard data={DUMMY_DATA}></MainDashboard>
-                <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
+                <main>
+                    <MainDashboard data={DUMMY_DATA}></MainDashboard>
+                    <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
+                </main>
             </div>
         </ThemeContext.Provider>
     );

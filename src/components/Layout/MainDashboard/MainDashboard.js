@@ -14,7 +14,7 @@ const MainDashboard = (props) => {
         );
     });
 
-    return <div className={styles.mainDashboardGrid}>{mainCards}</div>;
+    return <section className={styles.mainDashboardGrid}>{mainCards}</section>;
 };
 
 export default MainDashboard;
