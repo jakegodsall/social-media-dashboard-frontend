@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 import Header from './components/Layout/Header';
 import MainDashboard from './components/Layout/MainDashboard/MainDashboard';
@@ -77,8 +78,15 @@ const App = () => {
 
     return (
         <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-            <div className={mainBackgroundClasses}></div>
-            <div className={partialBackgroundClasses}></div>
+            {ReactDOM.createPortal(
+                <React.Fragment>
+                    <div className={mainBackgroundClasses}></div>
+                    <div className={partialBackgroundClasses}></div>
+                </React.Fragment>,
+
+                document.getElementById('background')
+            )}
+
             <div className={styles.container}>
                 <Header totalFollowers={totalFollowers}></Header>
                 <MainDashboard data={DUMMY_DATA}></MainDashboard>
