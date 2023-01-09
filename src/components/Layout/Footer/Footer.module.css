@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: hsl(228, 34%, 66%);
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: hsl(163, 72%, 41%);
+}
+
+/* Light mode */
+
+.footerLightMode {
+    color: hsl(228, 12%, 44%);
+}
+
+.linkLightMode {
+    color: hsl(230, 17%, 14%);
+}

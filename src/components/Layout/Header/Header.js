@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { ThemeContext } from '../../context/theme-context';
+import { ThemeContext } from '../../../context/theme-context';
 
-import Switch from '../UI/Switch';
+import Switch from '../../UI/Switch';
 import styles from './Header.module.css';
 
 const Header = (props) => {

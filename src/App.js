@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './components/Layout/Header';
+import Header from './components/Layout/Header/Header';
 import MainDashboard from './components/Layout/MainDashboard/MainDashboard';
 import TodayDashboard from './components/Layout/TodayDashboard/TodayDashboard';
 
 import styles from './App.module.css';
 import { ThemeContext } from './context/theme-context';
+import Footer from './components/Layout/Footer/Footer';
 
 const DUMMY_DATA = [
     {
@@ -93,6 +94,7 @@ const App = () => {
                     <MainDashboard data={DUMMY_DATA}></MainDashboard>
                     <TodayDashboard data={DUMMY_DATA}></TodayDashboard>
                 </main>
+                <Footer></Footer>
             </div>
         </ThemeContext.Provider>
     );
