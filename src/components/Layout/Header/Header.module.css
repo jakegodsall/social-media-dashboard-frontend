@@ -58,6 +58,12 @@ p {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .headerLeft h1 {
+        font-size: 1.4rem;
+    }
+}
+
 /* Light mode */
 .headerLightMode h1 {
     color: hsl(230, 17%, 14%);

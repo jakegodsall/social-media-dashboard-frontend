@@ -61,3 +61,9 @@ p {
 .mainDashboardItemLightMode .followers {
     color: hsl(230, 17%, 14%);
 }
+
+@media screen and (max-width: 350px) {
+    .mainDashboardItem {
+        padding: 0 1rem;
+    }
+}
