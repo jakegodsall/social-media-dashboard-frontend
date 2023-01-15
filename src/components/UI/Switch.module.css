@@ -12,15 +12,22 @@
 .switch:focus {
     outline: none;
 }
-.switch::-webkit-slider-thumb,
+
 .switch::-moz-range-thumb {
+    appearance: none;
+    background-color: hsl(232, 19%, 15%);
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: default;
+}
+
+.switch::-webkit-slider-thumb {
     appearance: none;
     width: 1rem;
     height: 1rem;
+    background-color: hsl(232, 19%, 15%);
     border-radius: 50%;
-    background: hsl(232, 19%, 15%);
-    border: none;
-    cursor: default;
 }
 
 /* Light mode */
@@ -28,7 +35,11 @@
     background-image: linear-gradient(to right, hsl(228, 12%, 44%), hsl(228, 12%, 44%));
 }
 
-.switchLightMode::-webkit-slider-thumb,
+.switchLightMode::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #fff;
+}
+
 .switchLightMode::-moz-range-thumb {
     appearance: none;
     width: 1rem;
