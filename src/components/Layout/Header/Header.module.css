@@ -77,3 +77,7 @@ label {
 .headerLightMode p {
     color: hsl(228, 12%, 44%);
 }
+
+.headerLightMode .headerRight {
+    color: hsl(228, 12%, 44%);
+}
